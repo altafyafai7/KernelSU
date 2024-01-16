@@ -1,7 +1,10 @@
 name: GKI Kernel Build
 
 on:
-  workflow_call:
+  schedule:
+    - cron: "59 23 * * SUN"
+  workflow_dispatch:
+  
     inputs:
       version:
         required: true
